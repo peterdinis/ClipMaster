@@ -8,8 +8,11 @@ const Footer: FC = () => {
       <footer className="w-full bg-gray-100 dark:bg-gray-900 py-16">
         <div className="md:px-12 lg:px-28">
           <div className="container m-auto space-y-6 text-gray-600 dark:text-gray-300">
-            <Camera className="m-auto" size={30} /> Clip Master
-             <ul
+            <div className="flex items-center justify-center space-x-2">
+              <Camera size={30} />
+              <span>Clip Master</span>
+            </div>
+            <ul
               role="list"
               className="flex flex-col items-center justify-center gap-4 py-4 sm:flex-row sm:gap-8"
             >
@@ -19,25 +22,23 @@ const Footer: FC = () => {
                 </Link>
               </li>
               <li role="listitem">
-                <Link  href="#" className="hover:text-primary">
-                  Features
+                <Link href="#" className="hover:text-primary">
+                  Services
                 </Link>
               </li>
               <li role="listitem">
-                <Link  href="#" className="hover:text-primary">
-                  Get started
+                <Link href="#" className="hover:text-primary">
+                  Pricing
                 </Link>
               </li>
               <li role="listitem">
-                <Link  href="#" className="hover:text-primary">
-                  About us
+                <Link href="#" className="hover:text-primary">
+                  About Clip Master
                 </Link>
               </li>
             </ul>
-            <div className="text-center">
-              <span className="text-xl tracking-wide">
-                <Copy size={20} /> Clip Master 2024
-               </span>
+            <div className="text-center flex items-center justify-center space-x-2">
+              <span className="text-xl tracking-wide">&copy; Clip Master 2024</span>
             </div>
           </div>
         </div>
