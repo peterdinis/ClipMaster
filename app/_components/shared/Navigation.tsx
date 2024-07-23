@@ -3,6 +3,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Camera } from "lucide-react";
 import { FC } from "react";
+import Link from "next/link";
 
 const Navigation: FC = () => {
   return (
@@ -17,8 +18,8 @@ const Navigation: FC = () => {
               className="peer hidden"
             />
             <div className="w-full px-6 flex justify-between lg:w-max md:px-0 z-30">
-              <a
-                href="#"
+              <Link
+                href="/"
                 aria-label="logo"
                 className="flex space-x-2 items-center"
               >
@@ -29,7 +30,7 @@ const Navigation: FC = () => {
                     Master
                   </span>
                 </span>
-              </a>
+              </Link>
 
               <div className="flex items-center lg:hidden max-h-10">
                 <Label
@@ -63,35 +64,34 @@ const Navigation: FC = () => {
                         flex flex-col gap-y-6 lg:gap-y-0 lg:flex-row w-full"
                 >
                   <li>
-                    <a
+                    <Link
                       href="#"
-                      className="block md:px-4 transition dark:text-gray-300 dark:hover:text-yellow-300 hover:text-yellow-700"
+                      className="block md:px-4 transition dark:text-gray-300 hover:text-primary"
                     >
                       <span>Services</span>
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a
+                    <Link
                       href="#"
-                      className="block md:px-4 transition dark:text-gray-300 dark:hover:text-yellow-300 hover:text-yellow-700"
+                      className="block md:px-4 transition dark:text-gray-300 hover:text-primary"
                     >
                       <span>Pricing</span>
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a
+                    <Link
                       href="#"
-                      className="block md:px-4 transition dark:text-gray-300 dark:hover:text-yellow-300 hover:text-yellow-700"
+                      className="block md:px-4 transition dark:text-gray-300 hover:text-primary"
                     >
                       <span>About Clip Master</span>
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </div>
 
               <div
-                className="w-full min-w-max space-y-2 
-                    border-gray-700 lg:space-y-0 sm:w-max lg:border-l"
+                className="w-full min-w-max space-y-2"
               >
                 <Button
                   type="button"
