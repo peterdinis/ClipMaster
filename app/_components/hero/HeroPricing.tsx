@@ -24,15 +24,15 @@ const HeroPricing: FC = () => {
               <div className="text-sm text-muted-foreground">per month</div>
               <ul className="grid gap-2 text-sm">
                 <li className="flex items-center gap-2">
-                  <CheckIcon className="w-4 h-4 fill-green-500" />
+                  <CheckIcon className="w-4 h-4" />
                   1080p video export
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckIcon className="w-4 h-4 fill-green-500" />
+                  <CheckIcon className="w-4 h-4" />
                   Basic editing tools
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckIcon className="w-4 h-4 fill-green-500" />
+                  <CheckIcon className="w-4 h-4" />
                   10GB cloud storage
                 </li>
               </ul>
