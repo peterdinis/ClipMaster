@@ -5,7 +5,7 @@ import { CheckIcon } from "lucide-react"
 
 const HeroPricing: FC = () => {
   return (
-    <section className="w-full py-12">
+    <section className="w-full">
       <div className="container grid gap-8 px-4 md:px-6">
         <div className="flex flex-col md:flex-row items-start md:items-center gap-4 md:gap-8">
           <div className="grid gap-1">
