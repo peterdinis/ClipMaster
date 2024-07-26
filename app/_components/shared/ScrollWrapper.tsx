@@ -6,7 +6,7 @@ import { FC, ReactNode } from "react";
 interface IScrollWrapperProps {
     children?: ReactNode;
     className: string;
-    props: Record<string, unknown>;
+    props?: Record<string, unknown>;
 }
 
 const ScrollWrapper: FC<IScrollWrapperProps> = ({children, className, props}) => {
