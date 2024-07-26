@@ -1,14 +1,18 @@
 "use client";
 
-import { FC } from "react";
+import { FC, useMemo } from "react";
 import icon from "../../../public/img/hero.png"
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import getScrollAnimation from '@/app/_utils/getScrollAnimation';
+import {motion} from "framer-motion";
 
 const HeroWrapper: FC = () => {
+    const scrollAnimation = useMemo(() => getScrollAnimation(), []);
+
     return (
-        <>
+        <motion.section variants={scrollAnimation}>
             <div className='relative isolation-auto mx-auto min-h-screen max-w-screen-xl overflow-hidden'>
                 <Image
                     src={icon}
@@ -40,7 +44,7 @@ const HeroWrapper: FC = () => {
                     </Link>
                 </Button>
                 <Button
-                    variant={"default"}
+                    variant={"secondary"}
                     className='btn text-text-dark border-text-dark absolute left-0 top-1/4 translate-y-[-50%] rotate-[-90deg] transform border'
                 >
                     <Link href='/about' className='p-2 text-2xl'>
@@ -48,7 +52,7 @@ const HeroWrapper: FC = () => {
                     </Link>
                 </Button>
             </div>
-        </>
+        </motion.section>
     );
 };
 
