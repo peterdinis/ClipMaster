@@ -12,7 +12,7 @@ const Footer: FC = () => {
     
     return (
         <ScrollWrapper>
-            <motion.footer variants={scrollAnimation} className='w-full py-16 dark:bg-gray-900'>
+            <motion.footer variants={scrollAnimation} className='w-full py-16 mt-5 dark:bg-background'>
                 <div className='md:px-12 lg:px-28'>
                     <div className='container m-auto space-y-6 text-gray-600 dark:text-gray-300'>
                         <div className='flex items-center justify-center space-x-2'>

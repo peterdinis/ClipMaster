@@ -1,3 +1,5 @@
+"use client"
+
 import {
     Card,
     CardHeader,
@@ -7,12 +9,16 @@ import {
     CardFooter,
 } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { FC } from 'react';
+import { FC, useMemo } from 'react';
 import { CheckIcon } from 'lucide-react';
+import getScrollAnimation from '@/app/_utils/getScrollAnimation';
+import {motion} from "framer-motion";
 
 const HeroPricing: FC = () => {
+    const scrollAnimation = useMemo(() => getScrollAnimation(), []);
+
     return (
-        <section className='w-full'>
+        <motion.section id="pricing" variants={scrollAnimation} className='w-full'>
             <div className='container grid gap-8 px-4 md:px-6'>
                 <div className='flex flex-col items-start gap-4 md:flex-row md:items-center md:gap-8'>
                     <div className='grid gap-1'>
@@ -126,7 +132,7 @@ const HeroPricing: FC = () => {
                     </Card>
                 </div>
             </div>
-        </section>
+        </motion.section>
     );
 };
 
