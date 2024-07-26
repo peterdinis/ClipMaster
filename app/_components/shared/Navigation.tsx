@@ -4,6 +4,7 @@ import { Label } from '@/components/ui/label';
 import { Camera } from 'lucide-react';
 import { FC } from 'react';
 import Link from 'next/link';
+import ThemeButton from './ThemeButton';
 
 const Navigation: FC = () => {
     return (
@@ -87,6 +88,7 @@ const Navigation: FC = () => {
                                 </ul>
                             </div>
 
+                            <ThemeButton />
                             <div className='w-full min-w-max space-y-2'>
                                 <Button
                                     type='button'
