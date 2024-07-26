@@ -27,7 +27,7 @@ const Navigation: FC = () => {
                                 <Camera size={30} />
                                 <span className='text-2xl font-bold text-orange-500 dark:text-white'>
                                     Clip{' '}
-                                    <span className='text-gray-500 dark:text-yellow-300'>
+                                    <span className='text-gray-500 dark:text-orange-300'>
                                         Master
                                     </span>
                                 </span>
@@ -104,7 +104,7 @@ const Navigation: FC = () => {
                                     variant={'secondary'}
                                     className='ml-4 w-full rounded-full px-6 py-3 text-center transition sm:w-max'
                                 >
-                                    <span className='block text-sm font-semibold text-yellow-900'>
+                                    <span className='block text-sm font-semibold text-orange-600'>
                                         Login
                                     </span>
                                 </Button>
