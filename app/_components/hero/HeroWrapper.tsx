@@ -1,38 +1,54 @@
-'use client';
+"use client";
 
-import { FC, useMemo } from 'react';
-import { motion } from 'framer-motion';
-import getScrollAnimation from '@/app/_utils/getScrollAnimation';
-import { Highlight } from '@/components/ui/hightlight';
+import { FC } from "react";
+import icon from "../../../public/img/hero.png"
+import Image from "next/image";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
 
 const HeroWrapper: FC = () => {
-    const scrollAnimation = useMemo(() => getScrollAnimation(), []);
     return (
-        <motion.div
-            variants={scrollAnimation}
-            className='m-auto px-6 pt-32 md:px-12 lg:px-7 lg:pt-[4.8rem]'
-        >
-            <motion.h1
-                initial={{
-                    opacity: 0,
-                    y: 20,
-                }}
-                animate={{
-                    opacity: 1,
-                    y: [20, -5, 0],
-                }}
-                transition={{
-                    duration: 0.5,
-                    ease: [0.4, 0.0, 0.2, 1],
-                }}
-                className='mx-auto mt-24 max-w-4xl px-4 text-center text-2xl font-bold leading-relaxed text-neutral-700 dark:text-white md:text-4xl lg:text-5xl lg:leading-snug'
-            >
-                Clip Master <br />
-                <Highlight className='text-black dark:text-white'>
-                    Your only software for video editing
-                </Highlight>
-            </motion.h1>
-        </motion.div>
+        <>
+            <div className='relative isolation-auto mx-auto min-h-screen max-w-screen-xl overflow-hidden'>
+                <Image
+                    src={icon}
+                    alt='header'
+                    className='absolute left-1/2 top-1/2 w-full max-w-[500px] -translate-x-1/2 -translate-y-1/2 transform drop-shadow-[0_0_50px_rgba(0,0,0,0.8)]'
+                />
+                <h4 className='prose prose-h4: absolute left-1/2 top-1/2 z-50 -translate-x-[calc(50%+250px)] -translate-y-1/2 transform text-5xl tracking-[25px] dark:text-white'>
+                    Clip
+                </h4>
+                <h4 className='prose prose-h4: absolute left-1/2 top-1/2 z-50 -translate-x-[calc(50%-250px)] -translate-y-1/2 transform text-5xl tracking-[25px] dark:text-white'>
+                    Master
+                </h4>
+                <div className="flex justify-center align-top">
+                <Button
+                    variant={"default"}
+                    className='btn text-text-dark absolute left-1/2 top-1/2 mt-12 -translate-x-1/2 translate-y-[calc(-50%+225px)] transform shadow-[0_0_50px_rgba(0,0,0,0.4)]'
+                >
+                    <Link className='p-2 text-2xl' href='/login'>
+                        Try now
+                    </Link>
+                </Button>
+                </div>
+                <Button
+                    variant={"default"}
+                    className='btn absolute right-0 top-1/2 translate-y-[-50%] rotate-90 transform border text-white'
+                >
+                    <Link className='p-2 text-2xl' href='/services'>
+                        Services & Pricing
+                    </Link>
+                </Button>
+                <Button
+                    variant={"default"}
+                    className='btn text-text-dark border-text-dark absolute left-0 top-1/4 translate-y-[-50%] rotate-[-90deg] transform border'
+                >
+                    <Link href='/about' className='p-2 text-2xl'>
+                        About Clip Master
+                    </Link>
+                </Button>
+            </div>
+        </>
     );
 };
 
