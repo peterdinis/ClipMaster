@@ -5,7 +5,7 @@ import { FC, ReactNode } from "react";
 
 interface IScrollWrapperProps {
     children?: ReactNode;
-    className: string;
+    className?: string;
     props?: Record<string, unknown>;
 }
 
