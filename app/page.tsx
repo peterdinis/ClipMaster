@@ -1,19 +1,14 @@
+"use client"
+
 import { NextPage } from 'next';
 import HeroWrapper from './_components/hero/HeroWrapper';
-import Footer from './_components/shared/Footer';
-import HeroPricing from './_components/hero/HeroPricing';
-import HeroServices from './_components/hero/HeroServices';
-import AboutWrapper from './_components/hero/AboutWrapper';
+import {motion} from "framer-motion";
 
 const Homepage: NextPage = () => {
     return (
-        <>
+        <motion.div initial='initial' animate='animate'>
             <HeroWrapper />
-            <AboutWrapper />
-            <HeroServices />
-            <HeroPricing />
-            <Footer />
-        </>
+        </motion.div>
     );
 };
 
