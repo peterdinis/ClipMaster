@@ -3,7 +3,7 @@ import { FC } from "react";
 
 const HeroServices: FC = () => {
     return (
-        <section className="w-full py-12 md:py-24 lg:py-32">
+        <section className="w-full  md:py-24 lg:py-32">
         <div className="container px-4 md:px-6">
           <div className="flex flex-col items-center justify-center space-y-8">
             <div className="text-center space-y-4">
