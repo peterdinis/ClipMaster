@@ -13,14 +13,10 @@ dependencies:
     version: 2.1.0(@types/react-dom@18.3.0)(@types/react@18.3.3)(react-dom@18.3.1)(react@18.3.1)
   '@radix-ui/react-slot':
     specifier: ^1.1.0
-<<<<<<< HEAD
-    version: 1.1.0(@types/react@18.3.3)(react@19.0.0-rc-d025ddd3-20240722)
+    version: 1.1.0(@types/react@18.3.3)(react@18.3.1)
   '@tabler/icons-react':
     specifier: ^3.11.0
-    version: 3.11.0(react@19.0.0-rc-d025ddd3-20240722)
-=======
-    version: 1.1.0(@types/react@18.3.3)(react@18.3.1)
->>>>>>> main
+    version: 3.11.0(react@18.3.1)
   class-variance-authority:
     specifier: ^0.7.0
     version: 0.7.0
@@ -29,7 +25,7 @@ dependencies:
     version: 2.1.1
   framer-motion:
     specifier: ^11.3.17
-    version: 11.3.17(react-dom@19.0.0-rc-d025ddd3-20240722)(react@19.0.0-rc-d025ddd3-20240722)
+    version: 11.3.17(react-dom@18.3.1)(react@18.3.1)
   lucide-react:
     specifier: ^0.414.0
     version: 0.414.0(react@18.3.1)
@@ -71,6 +67,12 @@ devDependencies:
   postcss:
     specifier: ^8
     version: 8.4.39
+  prettier:
+    specifier: ^3.3.3
+    version: 3.3.3
+  prettier-plugin-tailwindcss:
+    specifier: ^0.6.5
+    version: 0.6.5(prettier@3.3.3)
   tailwindcss:
     specifier: ^3.4.1
     version: 3.4.6
@@ -384,13 +386,13 @@ packages:
       tslib: 2.6.3
     dev: false
 
-  /@tabler/icons-react@3.11.0(react@19.0.0-rc-d025ddd3-20240722):
+  /@tabler/icons-react@3.11.0(react@18.3.1):
     resolution: {integrity: sha512-xHNBi9mns1slvqos+7LkP3ube4CjWrANMbxMaorzwzO9J/+y1sAEG/sN8CV8FmtpYW/9/gDR+OWCjjLLg0RmAw==}
     peerDependencies:
       react: '>= 16'
     dependencies:
       '@tabler/icons': 3.11.0
-      react: 19.0.0-rc-d025ddd3-20240722
+      react: 18.3.1
     dev: false
 
   /@tabler/icons@3.11.0:
@@ -1441,7 +1443,7 @@ packages:
       cross-spawn: 7.0.3
       signal-exit: 4.1.0
 
-  /framer-motion@11.3.17(react-dom@19.0.0-rc-d025ddd3-20240722)(react@19.0.0-rc-d025ddd3-20240722):
+  /framer-motion@11.3.17(react-dom@18.3.1)(react@18.3.1):
     resolution: {integrity: sha512-LZcckvZL8Rjod03bud8LQcp+R0PLmWIlOSu+NVc+v6Uh43fQr4IBsEAX7sSn7CdBQ1L0fZ/IqSXZVPnGFSMxHw==}
     peerDependencies:
       '@emotion/is-prop-valid': '*'
@@ -1455,8 +1457,8 @@ packages:
       react-dom:
         optional: true
     dependencies:
-      react: 19.0.0-rc-d025ddd3-20240722
-      react-dom: 19.0.0-rc-d025ddd3-20240722(react@19.0.0-rc-d025ddd3-20240722)
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
       tslib: 2.6.3
     dev: false
 
@@ -2362,6 +2364,67 @@ packages:
   /prelude-ls@1.2.1:
     resolution: {integrity: sha512-vkcDPrRZo1QZLbn5RLGPpg/WmIQ65qoWWhcGKf/b5eplkkarX0m9z8ppCat4mlOqUsWpyNuYgO3VRyrYHSzX5g==}
     engines: {node: '>= 0.8.0'}
+    dev: true
+
+  /prettier-plugin-tailwindcss@0.6.5(prettier@3.3.3):
+    resolution: {integrity: sha512-axfeOArc/RiGHjOIy9HytehlC0ZLeMaqY09mm8YCkMzznKiDkwFzOpBvtuhuv3xG5qB73+Mj7OCe2j/L1ryfuQ==}
+    engines: {node: '>=14.21.3'}
+    peerDependencies:
+      '@ianvs/prettier-plugin-sort-imports': '*'
+      '@prettier/plugin-pug': '*'
+      '@shopify/prettier-plugin-liquid': '*'
+      '@trivago/prettier-plugin-sort-imports': '*'
+      '@zackad/prettier-plugin-twig-melody': '*'
+      prettier: ^3.0
+      prettier-plugin-astro: '*'
+      prettier-plugin-css-order: '*'
+      prettier-plugin-import-sort: '*'
+      prettier-plugin-jsdoc: '*'
+      prettier-plugin-marko: '*'
+      prettier-plugin-organize-attributes: '*'
+      prettier-plugin-organize-imports: '*'
+      prettier-plugin-sort-imports: '*'
+      prettier-plugin-style-order: '*'
+      prettier-plugin-svelte: '*'
+    peerDependenciesMeta:
+      '@ianvs/prettier-plugin-sort-imports':
+        optional: true
+      '@prettier/plugin-pug':
+        optional: true
+      '@shopify/prettier-plugin-liquid':
+        optional: true
+      '@trivago/prettier-plugin-sort-imports':
+        optional: true
+      '@zackad/prettier-plugin-twig-melody':
+        optional: true
+      prettier-plugin-astro:
+        optional: true
+      prettier-plugin-css-order:
+        optional: true
+      prettier-plugin-import-sort:
+        optional: true
+      prettier-plugin-jsdoc:
+        optional: true
+      prettier-plugin-marko:
+        optional: true
+      prettier-plugin-organize-attributes:
+        optional: true
+      prettier-plugin-organize-imports:
+        optional: true
+      prettier-plugin-sort-imports:
+        optional: true
+      prettier-plugin-style-order:
+        optional: true
+      prettier-plugin-svelte:
+        optional: true
+    dependencies:
+      prettier: 3.3.3
+    dev: true
+
+  /prettier@3.3.3:
+    resolution: {integrity: sha512-i2tDNA0O5IrMO757lfrdQZCc2jPNDVntV0m/+4whiDfWaTKfMNgR7Qz0NAeGz/nRqF4m5/6CLzbP4/liHt12Ew==}
+    engines: {node: '>=14'}
+    hasBin: true
     dev: true
 
   /prop-types@15.8.1:
