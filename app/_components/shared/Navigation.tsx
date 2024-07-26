@@ -4,11 +4,12 @@ import { Label } from '@/components/ui/label';
 import { Camera } from 'lucide-react';
 import { FC } from 'react';
 import Link from 'next/link';
+import ThemeButton from './ThemeButton';
 
 const Navigation: FC = () => {
     return (
         <>
-            <nav className='fixed z-10 w-full bg-white dark:bg-transparent md:absolute md:bg-transparent'>
+            <nav className='fixed z-10 w-full bg-white  md:absolute md:bg-transparent'>
                 <div className='container m-auto px-2 md:px-12 lg:px-7'>
                     <div className='flex flex-wrap items-center justify-between gap-6 py-3 md:gap-0 md:py-4'>
                         <Input
@@ -26,7 +27,7 @@ const Navigation: FC = () => {
                                 <Camera size={30} />
                                 <span className='text-2xl font-bold text-orange-500 dark:text-white'>
                                     Clip{' '}
-                                    <span className='text-gray-500 dark:text-yellow-300'>
+                                    <span className='text-gray-500 dark:text-orange-300'>
                                         Master
                                     </span>
                                 </span>
@@ -57,7 +58,7 @@ const Navigation: FC = () => {
                             htmlFor='toggle_nav'
                             className='fixed left-0 top-0 z-10 hidden h-full w-full bg-opacity-30 backdrop-blur backdrop-filter peer-checked:block dark:bg-black dark:bg-opacity-80'
                         ></Label>
-                        <div className='z-30 hidden w-full flex-col items-center justify-end gap-y-6 rounded-xl bg-white p-6 peer-checked:flex dark:bg-gray-900 md:flex-nowrap lg:flex lg:w-7/12 lg:flex-row lg:gap-y-0 lg:bg-transparent lg:p-0'>
+                        <div className='z-30 hidden w-full flex-col items-center justify-end gap-y-6 rounded-xl bg-white p-6 peer-checked:flex md:flex-nowrap lg:flex lg:w-7/12 lg:flex-row lg:gap-y-0 lg:bg-transparent lg:p-0'>
                             <div className='w-full text-gray-600 lg:pr-4'>
                                 <ul className='flex w-full flex-col gap-y-6 text-sm font-medium tracking-wide lg:flex-row lg:gap-y-0'>
                                     <li>
@@ -87,6 +88,7 @@ const Navigation: FC = () => {
                                 </ul>
                             </div>
 
+                            <ThemeButton />
                             <div className='w-full min-w-max space-y-2'>
                                 <Button
                                     type='button'
@@ -102,7 +104,7 @@ const Navigation: FC = () => {
                                     variant={'secondary'}
                                     className='ml-4 w-full rounded-full px-6 py-3 text-center transition sm:w-max'
                                 >
-                                    <span className='block text-sm font-semibold text-yellow-900'>
+                                    <span className='block text-sm font-semibold text-orange-600'>
                                         Login
                                     </span>
                                 </Button>
