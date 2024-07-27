@@ -1,11 +1,14 @@
+'use client';
+
 import { Camera } from 'lucide-react';
 import { FC } from 'react';
 import Link from 'next/link';
+import ScrollWrapper from './ScrollWrapper';
 
 const Footer: FC = () => {
     return (
-        <>
-            <footer className='w-full py-16 dark:bg-gray-900'>
+        <ScrollWrapper>
+            <footer className='mt-5 w-full py-16 dark:bg-background'>
                 <div className='md:px-12 lg:px-28'>
                     <div className='container m-auto space-y-6 text-gray-600 dark:text-gray-300'>
                         <div className='flex items-center justify-center space-x-2'>
@@ -45,7 +48,7 @@ const Footer: FC = () => {
                     </div>
                 </div>
             </footer>
-        </>
+        </ScrollWrapper>
     );
 };
 

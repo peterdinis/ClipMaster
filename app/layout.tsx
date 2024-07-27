@@ -1,11 +1,14 @@
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+import { Roboto } from 'next/font/google';
 import './globals.css';
 import Navigation from './_components/shared/Navigation';
 import { Toaster } from '@/components/ui/toaster';
 import ThemeProvider from './_components/shared/ThemeProvider';
+import LayoutWrapper from './_components/shared/LayoutWrapper';
 
-const inter = Inter({ subsets: ['latin'] });
+const inter = Roboto({
+    weight: "500"
+});
 
 export const metadata: Metadata = {
     title: 'ClipMaster',
@@ -21,9 +24,11 @@ export default function RootLayout({
         <html lang='en'>
             <body className={inter.className}>
                 <ThemeProvider>
-                <Navigation />
-                {children}
-                <Toaster />
+                    <LayoutWrapper>
+                        <Navigation />
+                        {children}
+                        <Toaster />
+                    </LayoutWrapper>
                 </ThemeProvider>
             </body>
         </html>

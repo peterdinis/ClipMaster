@@ -1,3 +1,5 @@
+"use client"
+
 import {
     Card,
     CardHeader,
@@ -7,12 +9,12 @@ import {
     CardFooter,
 } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { FC } from 'react';
+import { FC} from 'react';
 import { CheckIcon } from 'lucide-react';
-
 const HeroPricing: FC = () => {
+
     return (
-        <section className='w-full'>
+        <section id="pricing" className='w-full'>
             <div className='container grid gap-8 px-4 md:px-6'>
                 <div className='flex flex-col items-start gap-4 md:flex-row md:items-center md:gap-8'>
                     <div className='grid gap-1'>
