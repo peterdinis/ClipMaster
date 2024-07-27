@@ -64,7 +64,7 @@ const Navigation: FC = () => {
                                     <li>
                                         <Link
                                             href='#'
-                                            className='block transition hover:text-primary dark:text-gray-300 md:px-4'
+                                            className='block text-lg transition hover:text-primary dark:text-gray-300 md:px-4'
                                         >
                                             <span>Services</span>
                                         </Link>
@@ -72,7 +72,7 @@ const Navigation: FC = () => {
                                     <li>
                                         <Link
                                             href='#'
-                                            className='block transition hover:text-primary dark:text-gray-300 md:px-4'
+                                            className='block text-lg transition hover:text-primary dark:text-gray-300 md:px-4'
                                         >
                                             <span>Pricing</span>
                                         </Link>
@@ -80,9 +80,9 @@ const Navigation: FC = () => {
                                     <li>
                                         <Link
                                             href='#'
-                                            className='block transition hover:text-primary dark:text-gray-300 md:px-4'
+                                            className='block text-lg transition hover:text-primary dark:text-gray-300 md:px-4'
                                         >
-                                            <span>About Clip Master</span>
+                                            <span>About Us</span>
                                         </Link>
                                     </li>
                                 </ul>
