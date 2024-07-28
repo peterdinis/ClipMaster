@@ -15,10 +15,7 @@ const RegisterForm: FC = () => {
     return (
         <Card className='relative pt-20'>
             <CardHeader>
-                <CardTitle className='text-2xl'>Login</CardTitle>
-                <CardDescription>
-                    Enter your email below to login to your account
-                </CardDescription>
+                <CardTitle className='text-2xl'>Register</CardTitle>
             </CardHeader>
             <CardContent>
                 <div className='grid gap-4'>
@@ -34,12 +31,6 @@ const RegisterForm: FC = () => {
                     <div className='grid gap-2'>
                         <div className='flex items-center'>
                             <Label htmlFor='password'>Password</Label>
-                            <Link
-                                href='#'
-                                className='ml-auto inline-block text-sm underline'
-                            >
-                                Forgot your password?
-                            </Link>
                         </div>
                         <Input id='password' type='password' required />
                     </div>
