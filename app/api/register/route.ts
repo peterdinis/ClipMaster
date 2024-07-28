@@ -1,4 +1,3 @@
-
 import { db } from '@/app/_utils/prisma';
 import * as bcrypt from 'bcrypt';
 import { NextRequest, NextResponse } from 'next/server';

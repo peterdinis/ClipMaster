@@ -9,7 +9,7 @@ import ThemeButton from './ThemeButton';
 const Navigation: FC = () => {
     return (
         <>
-            <nav className='fixed z-10 w-full bg-white  md:absolute md:bg-transparent'>
+            <nav className='fixed z-10 w-full bg-white md:absolute md:bg-transparent'>
                 <div className='container m-auto px-2 md:px-12 lg:px-7'>
                     <div className='flex flex-wrap items-center justify-between gap-6 py-3 md:gap-0 md:py-4'>
                         <Input

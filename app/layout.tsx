@@ -3,11 +3,12 @@ import { Roboto } from 'next/font/google';
 import './globals.css';
 import Navigation from './_components/shared/Navigation';
 import { Toaster } from '@/components/ui/toaster';
-import ThemeProvider from './_components/shared/ThemeProvider';
+import ThemeProvider from './_components/shared/providers/ThemeProvider';
 import LayoutWrapper from './_components/shared/LayoutWrapper';
+import QueryProvider from './_components/shared/providers/QueryProvider';
 
 const inter = Roboto({
-    weight: "500"
+    weight: '500',
 });
 
 export const metadata: Metadata = {
@@ -24,11 +25,13 @@ export default function RootLayout({
         <html lang='en'>
             <body className={inter.className}>
                 <ThemeProvider>
-                    <LayoutWrapper>
-                        <Navigation />
-                        {children}
-                        <Toaster />
-                    </LayoutWrapper>
+                    <QueryProvider>
+                        <LayoutWrapper>
+                            <Navigation />
+                            {children}
+                            <Toaster />
+                        </LayoutWrapper>
+                    </QueryProvider>
                 </ThemeProvider>
             </body>
         </html>
