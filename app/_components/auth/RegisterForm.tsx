@@ -13,7 +13,7 @@ import { Label } from '@/components/ui/label';
 
 const RegisterForm: FC = () => {
     return (
-        <Card className='mx-auto max-w-sm'>
+        <Card className='mx-auto max-w-sm relative isolation-auto mx-auto min-h-screen max-w-screen-xl overflow-hidden'>
             <CardHeader>
                 <CardTitle className='text-2xl'>Login</CardTitle>
                 <CardDescription>

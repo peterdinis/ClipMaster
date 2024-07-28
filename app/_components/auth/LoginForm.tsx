@@ -13,7 +13,7 @@ import { Label } from '@/components/ui/label';
 
 const LoginForm: FC = () => {
     return (
-        <Card className='mx-auto max-w-sm'>
+        <Card className='relative isolation-auto mx-auto min-h-screen max-w-screen-xl overflow-hidden'>
             <CardHeader>
                 <CardTitle className='text-2xl'>Login</CardTitle>
                 <CardDescription>
