@@ -92,11 +92,10 @@ const Navigation: FC = () => {
                             <div className='w-full min-w-max space-y-2'>
                                 <Button
                                     type='button'
-                                    title='Start buying'
-                                    className='ml-4 w-full rounded-full px-6 py-3 text-center transition focus:bg-yellow-100 active:bg-yellow-200 dark:focus:bg-gray-800 dark:active:bg-gray-700 sm:w-max'
+                                    className='ml-4 w-full rounded-full px-6 py-3 text-center transition dark:focus:bg-gray-800 dark:active:bg-gray-700 sm:w-max'
                                 >
                                     <span className='block text-sm font-semibold dark:text-white'>
-                                        Sign up
+                                        <Link href='/register'>Sign up</Link>
                                     </span>
                                 </Button>
                                 <Button
@@ -105,7 +104,7 @@ const Navigation: FC = () => {
                                     className='ml-4 w-full rounded-full px-6 py-3 text-center transition sm:w-max'
                                 >
                                     <span className='block text-sm font-semibold text-orange-600'>
-                                        Login
+                                        <Link href='/login'>Login</Link>
                                     </span>
                                 </Button>
                             </div>
