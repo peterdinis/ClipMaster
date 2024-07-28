@@ -29,6 +29,9 @@ dependencies:
   '@tabler/icons-react':
     specifier: ^3.11.0
     version: 3.11.0(react@18.3.1)
+  '@tanstack/react-query':
+    specifier: ^5.51.15
+    version: 5.51.15(react@18.3.1)
   bcrypt:
     specifier: ^5.1.1
     version: 5.1.1
@@ -884,6 +887,19 @@ packages:
       postcss-selector-parser: 6.0.10
       tailwindcss: 3.4.6
     dev: true
+
+  /@tanstack/query-core@5.51.15:
+    resolution: {integrity: sha512-xyobHDJ0yhPE3+UkSQ2/4X1fLSg7ICJI5J1JyU9yf7F3deQfEwSImCDrB1WSRrauJkMtXW7YIEcC0oA6ZZWt5A==}
+    dev: false
+
+  /@tanstack/react-query@5.51.15(react@18.3.1):
+    resolution: {integrity: sha512-UgFg23SrdIYrmfTSxAUn9g+J64VQy11pb9/EefoY/u2+zWuNMeqEOnvpJhf52XQy0yztQoyM9p6x8PFyTNaxXg==}
+    peerDependencies:
+      react: ^18.0.0
+    dependencies:
+      '@tanstack/query-core': 5.51.15
+      react: 18.3.1
+    dev: false
 
   /@types/bcrypt@5.0.2:
     resolution: {integrity: sha512-6atioO8Y75fNcbmj0G7UjI9lXN2pQ/IGJ2FWT4a/btd0Lk9lQalHLKhkgKVZ3r+spnmWUKfbMi1GEe9wyHQfNQ==}
