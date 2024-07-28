@@ -13,24 +13,24 @@ const HeroWrapper: FC = () => {
 
     return (
         <motion.section variants={scrollAnimation}>
-            <div className='relative isolation-auto mx-auto min-h-screen max-w-screen-xl overflow-hidden'>
+            <div className='relative mx-auto min-h-screen max-w-screen-xl overflow-hidden flex flex-col justify-center items-center'>
                 <Image
                     src={icon}
                     alt='header'
                     className='absolute left-1/2 top-1/2 w-full max-w-[500px] -translate-x-1/2 -translate-y-1/2 transform drop-shadow-[0_0_50px_rgba(0,0,0,0.8)]'
                 />
-                <h4 className='prose-h4: prose absolute left-1/2 top-1/2 z-50 -translate-x-[calc(50%+250px)] -translate-y-1/2 transform text-5xl tracking-[25px] dark:text-white'>
+                <h4 className='prose-h4: prose absolute left-1/2 top-1/2 z-50 -translate-x-[calc(50%+125px)] md:-translate-x-[calc(50%+250px)] -translate-y-1/2 transform text-3xl md:text-5xl tracking-[12px] md:tracking-[25px] dark:text-white'>
                     Clip
                 </h4>
-                <h4 className='prose-h4: prose absolute left-1/2 top-1/2 z-50 -translate-x-[calc(50%-250px)] -translate-y-1/2 transform text-5xl tracking-[25px] dark:text-white'>
+                <h4 className='prose-h4: prose absolute left-1/2 top-1/2 z-50 -translate-x-[calc(50%-125px)] md:-translate-x-[calc(50%-250px)] -translate-y-1/2 transform text-3xl md:text-5xl tracking-[12px] md:tracking-[25px] dark:text-white'>
                     Master
                 </h4>
-                <div className='flex justify-center align-top'>
+                <div className='flex justify-center items-center'>
                     <Button
                         variant={'default'}
-                        className='btn text-text-dark absolute left-1/2 top-1/2 mt-12 -translate-x-1/2 translate-y-[calc(-50%+225px)] transform shadow-[0_0_50px_rgba(0,0,0,0.4)]'
+                        className='btn text-text-dark absolute left-1/2 top-1/2 mt-8 md:mt-12 -translate-x-1/2 translate-y-[calc(-50%+150px)] md:translate-y-[calc(-50%+225px)] transform shadow-[0_0_50px_rgba(0,0,0,0.4)]'
                     >
-                        <Link className='p-2 text-2xl' href='/login'>
+                        <Link className='p-2 text-lg md:text-2xl' href='/login'>
                             Try now
                         </Link>
                     </Button>
@@ -39,15 +39,15 @@ const HeroWrapper: FC = () => {
                     variant={'default'}
                     className='btn absolute right-0 top-1/2 translate-y-[-50%] rotate-90 transform border text-white'
                 >
-                    <Link className='p-2 text-2xl' href='/services'>
+                    <Link className='p-2 text-lg md:text-2xl' href='/services'>
                         Services & Pricing
                     </Link>
                 </Button>
                 <Button
                     variant={'secondary'}
-                    className='btn text-text-dark border-text-dark absolute left-0 top-1/4 translate-y-[-50%] rotate-[-90deg] transform border'
+                    className='btn text-text-dark border-text-dark absolute left-0 top-1/4 translate-y-[-50%] -rotate-90 transform border'
                 >
-                    <Link href='/about' className='p-2 text-2xl'>
+                    <Link href='/about' className='p-2 text-lg md:text-2xl'>
                         About Clip Master
                     </Link>
                 </Button>
