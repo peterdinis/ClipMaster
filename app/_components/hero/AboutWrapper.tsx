@@ -4,7 +4,7 @@ import { FC } from 'react';
 const AboutWrapper: FC = () => {
     return (
         <>
-            <section id="about" className='md:py-20 lg:py-24'>
+            <section id='about' className='md:py-20 lg:py-24'>
                 <div className='container mx-auto px-4 md:px-6'>
                     <div className='mx-auto mb-12 max-w-3xl space-y-4 text-center md:mb-16'>
                         <h2 className='text-3xl font-bold tracking-tight md:text-4xl'>
