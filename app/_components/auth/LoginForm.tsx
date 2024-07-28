@@ -11,9 +11,9 @@ import {
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 
-const LoginForm: FC = () => {
+const RegisterForm: FC = () => {
     return (
-        <Card className='relative isolation-auto mx-auto min-h-screen max-w-screen-xl overflow-hidden'>
+        <Card className='relative pt-20'>
             <CardHeader>
                 <CardTitle className='text-2xl'>Login</CardTitle>
                 <CardDescription>
@@ -61,4 +61,4 @@ const LoginForm: FC = () => {
     );
 };
 
-export default LoginForm;
+export default RegisterForm;
