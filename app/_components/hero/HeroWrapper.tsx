@@ -19,10 +19,10 @@ const HeroWrapper: FC = () => {
                     alt='header'
                     className='absolute left-1/2 top-1/2 w-full max-w-[500px] -translate-x-1/2 -translate-y-1/2 transform drop-shadow-[0_0_50px_rgba(0,0,0,0.8)]'
                 />
-                <h4 className='prose-h4: prose absolute left-1/2 top-1/2 z-50 -translate-x-[calc(50%+125px)] md:-translate-x-[calc(50%+250px)] -translate-y-1/2 transform text-3xl md:text-5xl tracking-[12px] md:tracking-[25px] dark:text-white'>
+                <h4 className='font-bold absolute left-1/2 top-1/2 z-50 -translate-x-[calc(50%+125px)] sm:-translate-x-[calc(50%+150px)] md:-translate-x-[calc(50%+250px)] -translate-y-1/2 transform text-2xl sm:text-3xl md:text-5xl tracking-[6px] sm:tracking-[12px] md:tracking-[25px] dark:text-white'>
                     Clip
                 </h4>
-                <h4 className='prose-h4: prose absolute left-1/2 top-1/2 z-50 -translate-x-[calc(50%-125px)] md:-translate-x-[calc(50%-250px)] -translate-y-1/2 transform text-3xl md:text-5xl tracking-[12px] md:tracking-[25px] dark:text-white'>
+                <h4 className=' font-bold absolute left-1/2 top-1/2 z-50 -translate-x-[calc(50%-125px)] sm:-translate-x-[calc(50%-150px)] md:-translate-x-[calc(50%-250px)] -translate-y-1/2 transform text-2xl sm:text-3xl md:text-5xl tracking-[6px] sm:tracking-[12px] md:tracking-[25px] dark:text-white'>
                     Master
                 </h4>
                 <div className='flex justify-center items-center'>
