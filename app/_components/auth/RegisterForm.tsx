@@ -119,14 +119,11 @@ const RegisterForm: FC = () => {
                         <Button type='submit' className='w-full'>
                             Register
                         </Button>
-                        <Button variant='outline' className='w-full'>
-                            Login with Google
-                        </Button>
                     </div>
                     <div className='mt-4 text-center text-sm'>
                         Already have an account?{' '}
                         <Link href='/login' className='underline'>
-                            Login
+                            Login here
                         </Link>
                     </div>
                 </form>

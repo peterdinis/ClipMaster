@@ -95,7 +95,7 @@ const Navigation: FC = () => {
                                     className='ml-4 w-full rounded-full px-6 py-3 text-center transition dark:focus:bg-gray-800 dark:active:bg-gray-700 sm:w-max'
                                 >
                                     <span className='block text-sm font-semibold dark:text-white'>
-                                        <Link href='/register'>Sign up</Link>
+                                        <Link href='/register'>Register</Link>
                                     </span>
                                 </Button>
                                 <Button
