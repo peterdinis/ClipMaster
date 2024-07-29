@@ -6,7 +6,6 @@ import { Button } from '@/components/ui/button';
 import {
     Card,
     CardContent,
-    CardDescription,
     CardHeader,
     CardTitle,
 } from '@/components/ui/card';
@@ -69,9 +68,6 @@ const LoginForm: FC = () => {
         <Card className='relative pt-20'>
             <CardHeader>
                 <CardTitle className='text-2xl'>Login</CardTitle>
-                <CardDescription>
-                    Enter your email below to login to your account
-                </CardDescription>
             </CardHeader>
             <CardContent>
                 <form onSubmit={handleSubmit(loginUser)}>
