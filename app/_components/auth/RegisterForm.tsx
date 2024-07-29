@@ -98,25 +98,6 @@ const RegisterForm: FC = () => {
                             )}
                         </div>
                         <div className='grid gap-2'>
-                            <Label htmlFor='email'>Email</Label>
-                            <Input
-                                id='email'
-                                type='email'
-                                placeholder='Email'
-                                required
-                                {...register('email')}
-                            />
-
-                            {errors.email && (
-                                <p className='font-bold text-red-600'>
-                                    {
-                                        errors.email
-                                            .message as unknown as ReactNode
-                                    }
-                                </p>
-                            )}
-                        </div>
-                        <div className='grid gap-2'>
                             <Label htmlFor='password'>Password</Label>
                             <Input
                                 id='password'
