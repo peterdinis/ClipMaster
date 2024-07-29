@@ -6,6 +6,7 @@ import { Toaster } from '@/components/ui/toaster';
 import ThemeProvider from './_components/shared/providers/ThemeProvider';
 import LayoutWrapper from './_components/shared/LayoutWrapper';
 import QueryProvider from './_components/shared/providers/QueryProvider';
+import SessionAppProvider from './_components/shared/providers/SessionProvider';
 
 const inter = Roboto({
     weight: '500',
@@ -27,9 +28,11 @@ export default function RootLayout({
                 <ThemeProvider>
                     <QueryProvider>
                         <LayoutWrapper>
-                            <Navigation />
+                           <SessionAppProvider>
+                           <Navigation />
                             {children}
                             <Toaster />
+                           </SessionAppProvider>
                         </LayoutWrapper>
                     </QueryProvider>
                 </ThemeProvider>
