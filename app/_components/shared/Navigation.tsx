@@ -1,3 +1,5 @@
+'use client';
+
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
@@ -5,8 +7,19 @@ import { Camera } from 'lucide-react';
 import { FC } from 'react';
 import Link from 'next/link';
 import ThemeButton from './ThemeButton';
+import { useSession, signOut } from 'next-auth/react';
+import {
+    DropdownMenu,
+    DropdownMenuContent,
+    DropdownMenuItem,
+    DropdownMenuLabel,
+    DropdownMenuSeparator,
+    DropdownMenuTrigger,
+} from '@/components/ui/dropdown-menu';
 
 const Navigation: FC = () => {
+    const { data: session } = useSession();
+
     return (
         <>
             <nav className='fixed z-10 w-full bg-white dark:bg-background md:absolute md:bg-transparent'>
@@ -89,25 +102,55 @@ const Navigation: FC = () => {
                             </div>
 
                             <ThemeButton />
-                            <div className='w-full min-w-max space-y-2'>
-                                <Button
-                                    type='button'
-                                    className='ml-4 w-full rounded-full px-6 py-3 text-center transition dark:focus:bg-gray-800 dark:active:bg-gray-700 sm:w-max'
-                                >
-                                    <span className='block text-sm font-semibold dark:text-white'>
-                                        <Link href='/register'>Register</Link>
-                                    </span>
-                                </Button>
-                                <Button
-                                    type='button'
-                                    variant={'secondary'}
-                                    className='ml-4 w-full rounded-full px-6 py-3 text-center transition sm:w-max'
-                                >
-                                    <span className='block text-sm font-semibold text-orange-600'>
-                                        <Link href='/login'>Login</Link>
-                                    </span>
-                                </Button>
-                            </div>
+                            {!session?.user ? (
+                                <>
+                                    <div className='w-full min-w-max space-y-2'>
+                                        <Button
+                                            type='button'
+                                            className='ml-4 w-full rounded-full px-6 py-3 text-center transition dark:focus:bg-gray-800 dark:active:bg-gray-700 sm:w-max'
+                                        >
+                                            <span className='block text-sm font-semibold dark:text-white'>
+                                                <Link href='/register'>
+                                                    Register
+                                                </Link>
+                                            </span>
+                                        </Button>
+                                        <Button
+                                            type='button'
+                                            variant={'secondary'}
+                                            className='ml-4 w-full rounded-full px-6 py-3 text-center transition sm:w-max'
+                                        >
+                                            <span className='block text-sm font-semibold text-orange-600'>
+                                                <Link href='/login'>Login</Link>
+                                            </span>
+                                        </Button>
+                                    </div>
+                                </>
+                            ) : (
+                                <>
+                                    <DropdownMenu>
+                                        <DropdownMenuTrigger>
+                                            Profile menu
+                                        </DropdownMenuTrigger>
+                                        <DropdownMenuContent>
+                                            <DropdownMenuLabel>
+                                                {session.user.email}
+                                            </DropdownMenuLabel>
+                                            <DropdownMenuSeparator />
+                                            <DropdownMenuItem>
+                                                <Button 
+                                                variant={"ghost"}
+                                                
+                                                onClick={() => {
+                                                    signOut()
+                                                }}>
+                                                    Logout
+                                                </Button>
+                                            </DropdownMenuItem>
+                                        </DropdownMenuContent>
+                                    </DropdownMenu>
+                                </>
+                            )}
                         </div>
                     </div>
                 </div>
