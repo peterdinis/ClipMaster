@@ -28,11 +28,11 @@ export default function RootLayout({
                 <ThemeProvider>
                     <QueryProvider>
                         <LayoutWrapper>
-                           <SessionAppProvider>
-                           <Navigation />
-                            {children}
-                            <Toaster />
-                           </SessionAppProvider>
+                            <SessionAppProvider>
+                                <Navigation />
+                                {children}
+                                <Toaster />
+                            </SessionAppProvider>
                         </LayoutWrapper>
                     </QueryProvider>
                 </ThemeProvider>
