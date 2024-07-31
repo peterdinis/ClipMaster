@@ -130,20 +130,20 @@ const Navigation: FC = () => {
                                 <>
                                     <DropdownMenu>
                                         <DropdownMenuTrigger>
-                                            Profile menu
+                                            Menu
                                         </DropdownMenuTrigger>
                                         <DropdownMenuContent>
-                                            <DropdownMenuLabel>
+                                            <DropdownMenuLabel className='p-2'>
                                                 {session.user.email}
                                             </DropdownMenuLabel>
                                             <DropdownMenuSeparator />
                                             <DropdownMenuItem>
-                                                <Button 
-                                                variant={"ghost"}
-                                                
-                                                onClick={() => {
-                                                    signOut()
-                                                }}>
+                                                <Button
+                                                    variant={'ghost'}
+                                                    onClick={() => {
+                                                        signOut();
+                                                    }}
+                                                >
                                                     Logout
                                                 </Button>
                                             </DropdownMenuItem>
