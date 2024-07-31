@@ -1,27 +1,31 @@
-"use client"
- 
-import { ColumnDef } from "@tanstack/react-table"
- 
-// This type is used to define the shape of our data.
-// You can use a Zod schema here if you want.
-export type Payment = {
-  id: string
-  amount: number
-  status: "pending" | "processing" | "success" | "failed"
-  email: string
-}
- 
-export const columns: ColumnDef<Payment>[] = [
-  {
-    accessorKey: "status",
-    header: "Status",
-  },
-  {
-    accessorKey: "email",
-    header: "Email",
-  },
-  {
-    accessorKey: "amount",
-    header: "Amount",
-  },
-]
+'use client';
+
+import { Video } from '@/app/_types/videoTypes';
+import { ColumnDef } from '@tanstack/react-table';
+
+
+export const columns: ColumnDef<Video>[] = [
+    {
+        accessorKey: 'videoName',
+        header: 'Video Name',
+    },
+    {
+        accessorKey: 'videoLength',
+        header: 'Length',
+        
+    },
+    {
+        accessorKey: 'status',
+        header: 'Status',
+    },
+
+    {
+      accessorKey: "lastUpdated",
+      header: "Last Updated"
+    },
+
+    {
+      accessorKey: "uploadedAt",
+      header: "Uploaded to app"
+    }
+];
