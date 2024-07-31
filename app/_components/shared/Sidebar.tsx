@@ -3,7 +3,6 @@ import { FC } from 'react';
 const Sidebar: FC = () => {
     return (
         <aside
-            id='default-sidebar'
             className='fixed left-0 top-0 mt-16 z-40 h-screen w-64 -translate-x-full transition-transform sm:translate-x-0'
             aria-label='Sidebar'
         >
