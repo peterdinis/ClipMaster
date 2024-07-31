@@ -118,7 +118,7 @@ export function DataTable<TData, TValue>({
 							<div>
 								<p className="text-sm dark:text-blue-50 text-gray-700">
 									Page{" "}
-									<span className="font-medium">1</span> z{" "}
+									<span className="font-medium">1</span> from{" "}
 									<span className="font-medium">10</span>
 								</p>
 							</div>
