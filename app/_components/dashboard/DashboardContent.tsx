@@ -1,11 +1,7 @@
-import { FC } from "react";
+import { FC } from 'react';
 
 const DashboardContent: FC = () => {
-    return (
-        <>
-            CONTENT
-        </>
-    )
-}
+    return <div className='w-full max-w-4xl px-4'>CONTENT</div>;
+};
 
 export default DashboardContent;
