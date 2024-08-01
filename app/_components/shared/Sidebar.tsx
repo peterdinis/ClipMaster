@@ -1,30 +1,10 @@
 "use client"
 
-import { LogOut} from 'lucide-react';
-import { signOut } from 'next-auth/react';
 import Link from 'next/link';
 import { FC } from 'react';
 import UploadVideo from '../video/UploadVideo';
-import { useRouter } from 'next/navigation';
-import { useToast } from '@/components/ui/use-toast';
 
 const Sidebar: FC = () => {
-    const router = useRouter();
-    
-    const {toast} = useToast();
-
-    const logoutUser = () => {
-        signOut({
-            redirect: false
-        });
-        toast({
-            title: "Succesfully logged out",
-            duration: 2000,
-            className: "bg-green-700 text-xl font-bold"
-        })
-        router.push("/login");
-    }
-
     return (
         <aside
             className='fixed left-0 top-0 mt-16 z-40 h-screen w-64 -translate-x-full transition-transform sm:translate-x-0'
@@ -49,18 +29,6 @@ const Sidebar: FC = () => {
                             <span className='ms-3'>Dashboard</span>
                         </Link>
                     </li>
-                    <li className='mt-2'>
-                        <Link
-                            href='#'
-                            className='group flex items-center rounded-lg p-2 text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700'
-                        >
-                            <LogOut />
-                            <span onClick={logoutUser} className='ms-3 flex-1 whitespace-nowrap'>
-                                Logout 
-                            </span>
-                        </Link>
-                    </li>
-
                     <li className='mt-2'>
                         <div
                             className='group flex items-center rounded-lg p-2 text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700'
