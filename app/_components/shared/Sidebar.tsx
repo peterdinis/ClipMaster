@@ -1,20 +1,14 @@
 "use client"
 
-import { LogOut } from 'lucide-react';
-import { signOut } from 'next-auth/react';
 import Link from 'next/link';
 import { FC } from 'react';
+import UploadVideo from '../video/UploadVideo';
+import { Settings2 } from 'lucide-react';
 
 const Sidebar: FC = () => {
-
-    const logoutUser = () => {
-        signOut();
-    }
-
     return (
         <aside
             className='fixed left-0 top-0 mt-16 z-40 h-screen w-64 -translate-x-full transition-transform sm:translate-x-0'
-            aria-label='Sidebar'
         >
             <div className='h-full overflow-y-auto bg-gray-50 px-3 py-4 dark:bg-background'>
                 <ul className='space-y-2 font-medium'>
@@ -36,15 +30,20 @@ const Sidebar: FC = () => {
                             <span className='ms-3'>Dashboard</span>
                         </Link>
                     </li>
-                    <li>
-                        <Link
-                            href='#'
+                    <li className='mt-2'>
+                        <div
                             className='group flex items-center rounded-lg p-2 text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700'
                         >
-                            <LogOut />
-                            <span onClick={logoutUser} className='ms-3 flex-1 whitespace-nowrap'>
-                                Logout 
-                            </span>
+                            <UploadVideo />
+                        </div>
+                    </li>
+                    <li>
+                        <Link
+                            href='/settings'
+                            className='group flex items-center rounded-lg p-2 text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700'
+                        >
+                            <Settings2 />
+                            <span className='ms-3'>Settings</span>
                         </Link>
                     </li>
                 </ul>
