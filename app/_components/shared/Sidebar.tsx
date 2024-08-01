@@ -1,15 +1,28 @@
 "use client"
 
-import { LogOut, Video } from 'lucide-react';
+import { LogOut} from 'lucide-react';
 import { signOut } from 'next-auth/react';
 import Link from 'next/link';
 import { FC } from 'react';
 import UploadVideo from '../video/UploadVideo';
+import { useRouter } from 'next/navigation';
+import { useToast } from '@/components/ui/use-toast';
 
 const Sidebar: FC = () => {
+    const router = useRouter();
+    
+    const {toast} = useToast();
 
     const logoutUser = () => {
-        signOut();
+        signOut({
+            redirect: false
+        });
+        toast({
+            title: "Succesfully logged out",
+            duration: 2000,
+            className: "bg-green-700 text-xl font-bold"
+        })
+        router.push("/login");
     }
 
     return (

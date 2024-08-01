@@ -16,9 +16,14 @@ import {
     DropdownMenuSeparator,
     DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
+import { useRouter } from 'next/navigation';
+import { useToast } from '@/components/ui/use-toast';
 
 const Navigation: FC = () => {
+    
     const { data: session } = useSession();
+    const router = useRouter();
+    const {toast} = useToast();
 
     return (
         <>
@@ -141,7 +146,15 @@ const Navigation: FC = () => {
                                                 <Button
                                                     variant={'ghost'}
                                                     onClick={() => {
-                                                        signOut();
+                                                        signOut({
+                                                            redirect: false
+                                                        });
+                                                        toast({
+                                                            title: "Succesfully logged out",
+                                                            duration: 2000,
+                                                            className: "bg-green-700 text-white font-bold"
+                                                        })
+                                                        router.push("/login");
                                                     }}
                                                 >
                                                     Logout
