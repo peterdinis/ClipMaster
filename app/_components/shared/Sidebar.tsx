@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { FC } from 'react';
 import UploadVideo from '../video/UploadVideo';
+import { Settings2 } from 'lucide-react';
 
 const Sidebar: FC = () => {
     return (
@@ -35,6 +36,15 @@ const Sidebar: FC = () => {
                         >
                             <UploadVideo />
                         </div>
+                    </li>
+                    <li>
+                        <Link
+                            href='/settings'
+                            className='group flex items-center rounded-lg p-2 text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700'
+                        >
+                            <Settings2 />
+                            <span className='ms-3'>Settings</span>
+                        </Link>
                     </li>
                 </ul>
             </div>
