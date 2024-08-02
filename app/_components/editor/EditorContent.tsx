@@ -1,5 +1,5 @@
 import { FC } from "react";
-import EditorSidebar from "./EditorSidebar";
+import EditorSidebar from "./sidebar/EditorSidebar";
 import EditorToolbar from "./EditorToolbar";
 
 const EditorContent: FC = () => {
