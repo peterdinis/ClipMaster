@@ -6,6 +6,35 @@ import Link from 'next/link';
 import ScrollWrapper from './ScrollWrapper';
 
 const Footer: FC = () => {
+
+    const homeScroll = () => {
+		const heroSection = document.querySelector(
+			"#home",
+		) as unknown as HTMLElement;
+		heroSection.scrollIntoView({ behavior: "smooth" });
+	};
+
+    const scrollAbout = () => {
+		const heroSection = document.querySelector(
+			"#about",
+		) as unknown as HTMLElement;
+		heroSection.scrollIntoView({ behavior: "smooth" });
+	};
+
+	const scrollServices = () => {
+		const heroSection = document.querySelector(
+			"#services",
+		) as unknown as HTMLElement;
+		heroSection.scrollIntoView({ behavior: "smooth" });
+	};
+
+	const pricingScroll = () => {
+		const heroSection = document.querySelector(
+			"#pricing",
+		) as unknown as HTMLElement;
+		heroSection.scrollIntoView({ behavior: "smooth" });
+	};
+
     return (
         <ScrollWrapper>
             <footer className='mt-5 w-full py-16 dark:bg-background'>
@@ -20,22 +49,22 @@ const Footer: FC = () => {
                             className='flex flex-col items-center justify-center gap-4 py-4 sm:flex-row sm:gap-8'
                         >
                             <li role='listitem'>
-                                <Link href='#' className='hover:text-primary'>
+                                <Link onClick={homeScroll} href='#' className='hover:text-primary'>
                                     Home
                                 </Link>
                             </li>
                             <li role='listitem'>
-                                <Link href='#' className='hover:text-primary'>
+                                <Link onClick={scrollServices} href='#' className='hover:text-primary'>
                                     Services
                                 </Link>
                             </li>
                             <li role='listitem'>
-                                <Link href='#' className='hover:text-primary'>
+                                <Link onClick={pricingScroll} href='#' className='hover:text-primary'>
                                     Pricing
                                 </Link>
                             </li>
                             <li role='listitem'>
-                                <Link href='#' className='hover:text-primary'>
+                                <Link onClick={scrollAbout} href='#' className='hover:text-primary'>
                                     About Clip Master
                                 </Link>
                             </li>
