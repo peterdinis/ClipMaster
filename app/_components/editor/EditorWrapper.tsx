@@ -1,10 +1,14 @@
 import { FC } from 'react';
 import EditorContent from './EditorContent';
+import EditorSidebar from './sidebar/EditorSidebar';
 
 const EditorWrapper: FC = () => {
-    return <div className='flex mx-auto overflow-hidden pt-24'>
-        <EditorContent />
-    </div>;
+    return (
+        <div className='pt-24 flex overflow-hidden'>
+            <EditorSidebar />
+            <EditorContent />
+        </div>
+    )
 };
 
 export default EditorWrapper;
