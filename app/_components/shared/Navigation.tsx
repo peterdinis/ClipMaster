@@ -99,37 +99,39 @@ const Navigation: FC = () => {
                             className='fixed left-0 top-0 z-10 hidden h-full w-full bg-opacity-30 backdrop-blur backdrop-filter peer-checked:block dark:bg-black dark:bg-opacity-80'
                         ></Label>
                         <div className='z-30 hidden w-full flex-col items-center justify-end gap-y-6 rounded-xl bg-white p-6 peer-checked:flex dark:bg-background md:flex-nowrap lg:flex lg:w-7/12 lg:flex-row lg:gap-y-0 lg:bg-transparent lg:p-0'>
-                            <div className='w-full text-gray-600 lg:pr-4'>
-                                <ul className='flex w-full flex-col gap-y-6 text-sm font-medium tracking-wide lg:flex-row lg:gap-y-0'>
-                                    <li>
-                                        <Link
-                                            href='#'
-                                            onClick={scrollServices}
+                            {!session?.user && (
+                                <div className='w-full text-gray-600 lg:pr-4'>
+                                    <ul className='flex w-full flex-col gap-y-6 text-sm font-medium tracking-wide lg:flex-row lg:gap-y-0'>
+                                        <li>
+                                            <Link
+                                                href='#'
+                                                onClick={scrollServices}
                                             className='block text-lg transition hover:text-primary dark:text-gray-300 md:px-4'
-                                        >
-                                            <span>Services</span>
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link
-                                            href='#'
-                                            onClick={pricingScroll}
+                                            >
+                                                <span>Services</span>
+                                            </Link>
+                                        </li>
+                                        <li>
+                                            <Link
+                                                href='#'
+                                                onClick={pricingScroll}
                                             className='block text-lg transition hover:text-primary dark:text-gray-300 md:px-4'
-                                        >
-                                            <span>Pricing</span>
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link
-                                            href='#'
-                                            onClick={scrollAbout}
+                                            >
+                                                <span>Pricing</span>
+                                            </Link>
+                                        </li>
+                                        <li>
+                                            <Link
+                                                href='#'
+                                                onClick={scrollAbout}
                                             className='block text-lg transition hover:text-primary dark:text-gray-300 md:px-4'
-                                        >
-                                            <span>About Us</span>
-                                        </Link>
-                                    </li>
-                                </ul>
-                            </div>
+                                            >
+                                                <span>About Us</span>
+                                            </Link>
+                                        </li>
+                                    </ul>
+                                </div>
+                            )}
 
                             <ThemeButton />
                             {!session?.user ? (
