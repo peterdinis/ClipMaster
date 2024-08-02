@@ -12,7 +12,7 @@ const HeroWrapper: FC = () => {
     const scrollAnimation = useMemo(() => getScrollAnimation(), []);
 
     return (
-        <motion.section variants={scrollAnimation}>
+        <motion.section id="home" variants={scrollAnimation}>
             <div className='relative isolation-auto mx-auto min-h-screen max-w-screen-xl overflow-hidden'>
                 <Image
                     src={icon}

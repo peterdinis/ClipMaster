@@ -25,6 +25,28 @@ const Navigation: FC = () => {
     const router = useRouter();
     const {toast} = useToast();
 
+    const scrollAbout = () => {
+		const heroSection = document.querySelector(
+			"#about",
+		) as unknown as HTMLElement;
+		heroSection.scrollIntoView({ behavior: "smooth" });
+	};
+
+	const scrollServices = () => {
+		const heroSection = document.querySelector(
+			"#services",
+		) as unknown as HTMLElement;
+		heroSection.scrollIntoView({ behavior: "smooth" });
+	};
+
+	const pricingScroll = () => {
+		const heroSection = document.querySelector(
+			"#pricing",
+		) as unknown as HTMLElement;
+		heroSection.scrollIntoView({ behavior: "smooth" });
+	};
+
+
     return (
         <>
             <nav className='fixed z-10 w-full bg-white dark:bg-background md:absolute md:bg-transparent'>
@@ -83,7 +105,8 @@ const Navigation: FC = () => {
                                         <li>
                                             <Link
                                                 href='#'
-                                                className='block text-lg transition hover:text-primary dark:text-gray-300 md:px-4'
+                                                onClick={scrollServices}
+                                            className='block text-lg transition hover:text-primary dark:text-gray-300 md:px-4'
                                             >
                                                 <span>Services</span>
                                             </Link>
@@ -91,7 +114,8 @@ const Navigation: FC = () => {
                                         <li>
                                             <Link
                                                 href='#'
-                                                className='block text-lg transition hover:text-primary dark:text-gray-300 md:px-4'
+                                                onClick={pricingScroll}
+                                            className='block text-lg transition hover:text-primary dark:text-gray-300 md:px-4'
                                             >
                                                 <span>Pricing</span>
                                             </Link>
@@ -99,7 +123,8 @@ const Navigation: FC = () => {
                                         <li>
                                             <Link
                                                 href='#'
-                                                className='block text-lg transition hover:text-primary dark:text-gray-300 md:px-4'
+                                                onClick={scrollAbout}
+                                            className='block text-lg transition hover:text-primary dark:text-gray-300 md:px-4'
                                             >
                                                 <span>About Us</span>
                                             </Link>
