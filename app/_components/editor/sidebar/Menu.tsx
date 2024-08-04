@@ -1,3 +1,5 @@
+"use client"
+
 import { usePathname } from "next/navigation";
 import { FC, useState } from "react";
 import { Button } from "@/components/ui/button";
@@ -10,7 +12,6 @@ import {
 } from "@/components/ui/tooltip";
 import { Ellipsis, LogOut } from "lucide-react";
 import Link from "next/link";
-import { CollapseMenuButton } from "../../shared/CollapseMenuButton";
 import { cn } from "@/lib/utils";
 import { getMenuList } from "../menu-list";
 

@@ -1,3 +1,5 @@
+"use client"
+
 import { FC } from "react";
 import Link from "next/link";
 import { Camera, PanelsTopLeft } from "lucide-react";
