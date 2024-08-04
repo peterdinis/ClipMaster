@@ -1,11 +1,8 @@
-"use client"
-
+import { FC } from "react";
 import Link from "next/link";
 import { Camera, PanelsTopLeft } from "lucide-react";
-
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
-import { FC } from "react";
 import { useStore } from "@/app/_hooks/use-store";
 import { useSidebarToggle } from "@/app/_hooks/use-sidebar-toggle";
 import { SidebarToggle } from "./SidebarToggle";
@@ -13,8 +10,8 @@ import Menu from "./Menu";
 
 const EditorSidebar: FC = () => {
   const sidebar = useStore(useSidebarToggle, (state) => state);
-  
-  if(!sidebar) return null;
+
+  if (!sidebar) return null;
 
   return (
     <aside
@@ -51,6 +48,6 @@ const EditorSidebar: FC = () => {
       </div>
     </aside>
   );
-}
+};
 
 export default EditorSidebar;
