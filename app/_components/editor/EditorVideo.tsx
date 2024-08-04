@@ -3,12 +3,9 @@ import { FC } from 'react';
 const EditorVideo: FC = () => {
     return (
         <div className='flex justify-center align-top'>
-            <video controls autoPlay>
-                <iframe
-                    width='420'
-                    height='315'
-                    src='https://www.youtube.com/embed/tgbNymZ7vqY?controls=0'
-                ></iframe>
+            <video width='320' height='240' controls preload='none'>
+                <source src={'/videos/example.mp4'} type='video/mp4' />
+                Your browser does not support the video tag.
             </video>
         </div>
     );
