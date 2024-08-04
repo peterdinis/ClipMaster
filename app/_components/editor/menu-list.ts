@@ -1,13 +1,12 @@
-import { Users, Settings,LayoutGrid, LucideIcon } from "lucide-react";
+import { Users, Settings, LayoutGrid, LucideIcon } from "lucide-react";
 
 type Submenu = {
-  href: string;
   label: string;
   active: boolean;
+  submenus?: Submenu[];
 };
 
 type Menu = {
-  href: string;
   label: string;
   active: boolean;
   icon: LucideIcon;
@@ -25,7 +24,6 @@ export function getMenuList(pathname: string): Group[] {
       groupLabel: "",
       menus: [
         {
-          href: "/dashboard",
           label: "Dashboard",
           active: pathname.includes("/dashboard"),
           icon: LayoutGrid,
@@ -37,18 +35,25 @@ export function getMenuList(pathname: string): Group[] {
       groupLabel: "Effects",
       menus: [
         {
-          href: "",
           label: "Effects",
           active: pathname.includes("/effects"),
           icon: Users,
           submenus: [
             {
-              href: "/effects/color",
               label: "Color Correction",
-              active: pathname === "/effects/color"
+              active: pathname.includes("/effects/color"),
+              submenus: [
+                {
+                  label: "Blue Color",
+                  active: pathname === "/effects/color/blue"
+                },
+                {
+                  label: "Red Color",
+                  active: pathname === "/effects/color/red"
+                }
+              ]
             },
             {
-              href: "/effects/filters",
               label: "Filters",
               active: pathname === "/effects/filters"
             }
@@ -60,14 +65,12 @@ export function getMenuList(pathname: string): Group[] {
       groupLabel: "Settings",
       menus: [
         {
-          href: "/users",
           label: "Users",
           active: pathname.includes("/users"),
           icon: Users,
           submenus: []
         },
         {
-          href: "/account",
           label: "Account",
           active: pathname.includes("/account"),
           icon: Settings,
