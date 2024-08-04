@@ -7,6 +7,7 @@ import ThemeProvider from './_components/shared/providers/ThemeProvider';
 import LayoutWrapper from './_components/shared/LayoutWrapper';
 import QueryProvider from './_components/shared/providers/QueryProvider';
 import SessionAppProvider from './_components/shared/providers/SessionProvider';
+import ScrollToTop from './_components/shared/ScrollToTop';
 
 const inter = Roboto({
     weight: '500',
@@ -31,6 +32,7 @@ export default function RootLayout({
                             <SessionAppProvider>
                                 <Navigation />
                                 {children}
+                                <ScrollToTop />
                                 <Toaster />
                             </SessionAppProvider>
                         </LayoutWrapper>
